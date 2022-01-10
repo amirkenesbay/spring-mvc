@@ -12,10 +12,11 @@ public class Student {
     private String name;
     @NotBlank(message = "surname is required")
     private String surname;
-    @Min(value = 500, message = "must be greater than 499")
-    @Max(value = 1000, message = "must be less than 1001")
+    @Min(value = 2, message = "must be greater than 0")
+    @Max(value = 150, message = "must be less than 150")
     private int age;
     private String course;
+    @Size(min = 2, message = "choose one option")
     private Map<String, String> courses;
     private String sport;
     private Map<String, String> sports;

@@ -1,6 +1,7 @@
 package mvc2;
 
 import com.amirkenesbay.spring.mvc.validation.CheckEmail;
+import mvc2.validation.CheckSite;
 
 import javax.validation.constraints.*;
 import java.util.Arrays;
@@ -28,7 +29,7 @@ public class Student {
     private String apartment;
     @NotBlank(message = "apartment is required")
     private String home;
-    @CheckEmail
+    @CheckSite
     private String site;
     @Pattern(regexp = "\\d{3}-\\d{3}-\\d{2}-\\d{2}", message = "please use pattern XXX-XXX-XX-XX")
     private String phoneNumber;
